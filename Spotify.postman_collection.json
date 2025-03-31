@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "515ec7d2-c44b-4819-a3a1-48bb258a2ec6",
+		"name": "Spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42332125"
+	},
+	"item": [
+		{
+			"name": "Get Tokern",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "refreshTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "af25dbe14ca04137b309470665a6e95b",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "dff04af3c34d4984bfa8d2062338715d",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Basic",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Spotify Token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://accounts.spotify.com/api/token",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Genre",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQDR-1F76QQK0Y08WuEfbf6qmVShN01RsJolF5GD_-Y4YOtURQ2Ir5phmRctmYqFGGXaYxQX2nSmL43xgaCdMFkFCKAu31uu7PkltuzoVOHPNdhsJHuIZYznOKnvOnKmweemVp1Uqyk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQD6Mpb2e1NgrQp9yUa-87wRCAqvuEGfdLTmNB5JSD8dNiGo0Db12CPLMBd6W7bJH5GqS1cs576FmG08L1G0X54zWxRL4NxTAnWn9Tb_j65ema9wgjfHxTAe3yyWN1IKlkVhlaojuxw"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/recommendations/available-genre-seeds",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"recommendations",
+						"available-genre-seeds"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  --url https://api.spotify.com/v1/recommendations/available-genre-seeds \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Genre with token",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "refreshTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "af25dbe14ca04137b309470665a6e95b",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "dff04af3c34d4984bfa8d2062338715d",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Spotify Token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQDR-1F76QQK0Y08WuEfbf6qmVShN01RsJolF5GD_-Y4YOtURQ2Ir5phmRctmYqFGGXaYxQX2nSmL43xgaCdMFkFCKAu31uu7PkltuzoVOHPNdhsJHuIZYznOKnvOnKmweemVp1Uqyk"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/recommendations/available-genre-seeds",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"recommendations",
+						"available-genre-seeds"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  --url https://api.spotify.com/v1/recommendations/available-genre-seeds \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'"
+			},
+			"response": []
+		},
+		{
+			"name": "Get new releases",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let res = pm.response.json();\r",
+							"let albumId = res.albums.items[3].id;\r",
+							"pm.environment.set(\"albumId_env\", albumId);\r",
+							"\r",
+							"let artistId = res.albums.items[3].artists[0].id;\r",
+							"pm.environment.set(\"artistId_env\", artistId);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "dff04af3c34d4984bfa8d2062338715d",
+							"type": "string"
+						},
+						{
+							"key": "refreshTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Spotify API",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "af25dbe14ca04137b309470665a6e95b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1POdFZRZbvb...qqillRxMr2z",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/browse/new-releases",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"new-releases"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  --url https://api.spotify.com/v1/browse/new-releases \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Album",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQD6Mpb2e1NgrQp9yUa-87wRCAqvuEGfdLTmNB5JSD8dNiGo0Db12CPLMBd6W7bJH5GqS1cs576FmG08L1G0X54zWxRL4NxTAnWn9Tb_j65ema9wgjfHxTAe3yyWN1IKlkVhlaojuxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1POdFZRZbvb...qqillRxMr2z"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/albums/{{albumId_env}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"albums",
+						"{{albumId_env}}"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  --url https://api.spotify.com/v1/browse/new-releases \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'"
+			},
+			"response": []
+		},
+		{
+			"name": "Get artist",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "dff04af3c34d4984bfa8d2062338715d",
+							"type": "string"
+						},
+						{
+							"key": "refreshTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "af25dbe14ca04137b309470665a6e95b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1POdFZRZbvb...qqillRxMr2z",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/{{artistId_env}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"{{artistId_env}}"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  --url https://api.spotify.com/v1/browse/new-releases \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'"
+			},
+			"response": []
+		}
+	]
+}
